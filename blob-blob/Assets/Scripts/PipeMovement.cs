@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PipeMovement : MonoBehaviour
 {
-    public float HorizontalForce;
+    public float HorizontalSpeed;
 
     void Update()
     {
-        transform.position += Vector3.left * HorizontalForce * Time.deltaTime;
+        transform.position += Vector3.left * HorizontalSpeed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

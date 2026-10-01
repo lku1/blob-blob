@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PipeController : MonoBehaviour
 {
     #region Declarations
-    public float SecondDelay;
     public GameObject HigherPipe;
     public GameObject LowerPipe;
     public GameObject DoublePipe;
@@ -12,8 +12,27 @@ public class PipeController : MonoBehaviour
     public Transform HighPoint;
     public Transform MiddlePoint;
     public GameManager GM;
+    public float CurrentSpeed;
+    public float SecondDelay;
     #endregion
 
+    private void Setup()
+    {
+        if (DifficultyManager.Instance.CurrentDifficulty == Difficulty.Normal)
+
+        {
+            CurrentSpeed = 5f;
+            SecondDelay = 5f;
+        }
+        if (DifficultyManager.Instance.CurrentDifficulty == Difficulty.Hard)
+        {
+            CurrentSpeed = 6f;
+            SecondDelay = 4f;
+        }
+
+        GM.GameState = State.Running;
+        GM.GameStart();
+    }
 
     public IEnumerator PipeSpawner()
     {
@@ -26,17 +45,21 @@ public class PipeController : MonoBehaviour
 
     void Spawn()
     {
-        int random = (int)Random.Range(0, 2);
+        int random = (int)Random.Range(0, 3);
         if (random == 0)
-            Instantiate<GameObject>(LowerPipe, LowerPoint.position, Quaternion.identity);
+        {
+            var p = Instantiate<GameObject>(LowerPipe, LowerPoint.position, Quaternion.identity); 
+            p.GetComponent<PipeMovement>().HorizontalSpeed = CurrentSpeed;
+        }
         else if (random == 1)
-            Instantiate<GameObject>(DoublePipe, MiddlePoint.position, Quaternion.identity);
+        {
+            var p = Instantiate<GameObject>(DoublePipe, MiddlePoint.position, Quaternion.identity);
+            p.GetComponent<PipeMovement>().HorizontalSpeed = CurrentSpeed;
+        }
         else if (random == 2)
-            Instantiate<GameObject>(HigherPipe, HighPoint.position, Quaternion.identity);
-    }
-
-    void Update()
-    {
-
+        {
+            var p = Instantiate<GameObject>(HigherPipe, HighPoint.position, Quaternion.identity);
+            p.GetComponent<PipeMovement>().HorizontalSpeed = CurrentSpeed;
+        }
     }
 }
