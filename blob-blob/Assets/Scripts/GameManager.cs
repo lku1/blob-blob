@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
 
     void Pause(bool paused)
     {
-
         GameState = paused ? State.Paused : State.Running;
         Time.timeScale = paused ? 0f : 1f;
     }
