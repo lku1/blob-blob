@@ -33,7 +33,11 @@ public class PlayerControl : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    { 
-
+    {
+        if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Pipe"))
+            GM.GameOver();
+        
+        if (collision.gameObject.CompareTag("ScoreZone"))
+            GM.UpdateScore();
     }
 }

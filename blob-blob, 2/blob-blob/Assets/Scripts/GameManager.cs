@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore()
     {
         currentScore++;
+        ScoreText.text = currentScore.ToString();
     }
 
     public void GameOver()
