@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PipeController : MonoBehaviour
 {
@@ -48,7 +47,7 @@ public class PipeController : MonoBehaviour
         int random = (int)Random.Range(0, 3);
         if (random == 0)
         {
-            var p = Instantiate<GameObject>(LowerPipe, LowerPoint.position, Quaternion.identity); 
+            var p = Instantiate<GameObject>(LowerPipe, LowerPoint.position, Quaternion.identity);
             p.GetComponent<PipeMovement>().HorizontalSpeed = CurrentSpeed;
         }
         else if (random == 1)

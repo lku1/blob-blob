@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 033a7745760687f4f946b26ced60a113
+guid: 2e77c2cf07471bc4699bab461c892c4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8957324059118975939
-    second: images_0
+      213: 8832167503239892954
+    second: pngwing.com_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,7 +99,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,23 +115,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: images_0
+      name: pngwing.com_0
       rect:
         serializedVersion: 2
-        x: 110
-        y: 56
-        width: 351
-        height: 268
+        x: 32
+        y: 33
+        width: 535
+        height: 535
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cbb8d916cece4c70800000000000000
-      internalID: 8957324059118975939
+      spriteID: adfcc53ac89229a70800000000000000
+      internalID: 8832167503239892954
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f4dce885035cbd944b4371a7ba2d7672
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      images_0: 8957324059118975939
+      pngwing.com_0: 8832167503239892954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
