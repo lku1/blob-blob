@@ -417,5 +417,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14ed9ddb55688574fb046ed9931a3c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PipeMoveScript
-  moveSpeed: 5
+  moveSpeed: 7
   deadZone: -15
